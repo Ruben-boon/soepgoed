@@ -1,6 +1,9 @@
 import { fetchPage } from "@/api/sanityApi";
 import { mapComponent } from "./utils/componentMap";
 
+// Enable ISR with 60 second revalidation
+export const revalidate = 60;
+
 const Home: React.FC = async () => {
   const data = await fetchPage("home");
 

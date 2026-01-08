@@ -21,6 +21,9 @@ const lambda = localFont({
 
 const manrope = Manrope({ subsets: ["latin"] });
 
+// Enable ISR with 60 second revalidation for layout data
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "Soepgoed Leiden",
   description: "Bij soepgoed leiden koken we samen met groentes van de markt",

@@ -4,6 +4,9 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 import Carousel from "../../components/carousel";
 
+// Enable ISR with 60 second revalidation
+export const revalidate = 60;
+
 const Page = async ({ params }: { params: { id: string } }) => {
   const data = await fetchPostSingle(`${params.id}`);
   const publishDate = data.publishedAt ? data.publishedAt : data._createdAt;

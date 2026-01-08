@@ -1,6 +1,8 @@
 import { fetchPage } from "@/api/sanityApi";
 import { mapComponent } from "../utils/componentMap";
 
+// Enable ISR with 60 second revalidation
+export const revalidate = 60;
 
 const Page = async ({ params }: { params: { id: string } }) => {
   const data = await fetchPage(`${params.id}`);
